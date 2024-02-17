@@ -76,9 +76,16 @@ function reset() {
 	document.getElementById("4x4").innerHTML = '.';
 }
 
+/*
+In particular, if the empty square is in the lower right corner, 
+then the puzzle is solvable only if the permutation of the remaining pieces is even. 
+Johnson & Story (1879) also showed that on boards of size m × n, 
+where m and n are both larger or equal to 2, all even permutations are solvable.
+Way to easily be able to solve all
+*/
 function scramble() {
 	document.getElementById("container").style.backgroundColor = "#c7c7c7";
-	let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, '.'];
+	let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 	for (let i = numbers.length - 1; i > 0; i--) {
 		const j = Math.floor(Math.random() * (i + 1));
 		[numbers[i], numbers[j]] = [numbers[j], numbers[i]];
@@ -99,7 +106,7 @@ function scramble() {
 	document.getElementById("4x1").innerHTML = numbers[12];
 	document.getElementById("4x2").innerHTML = numbers[13];
 	document.getElementById("4x3").innerHTML = numbers[14];
-	document.getElementById("4x4").innerHTML = numbers[15];
+	document.getElementById("4x4").innerHTML = '.';
 }
 
 function isSolved() {
