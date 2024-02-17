@@ -1,5 +1,5 @@
 <!--
-Dan Warnick
+4an Warnick
 dsw225@lehigh.edu
 CSE 264 - 011
 Prog2
@@ -10,6 +10,40 @@ Prog2
     <link rel="stylesheet" href="styles/styles.css"/>
   </head>
   <body>
-    <script src="scripts/scripts.js"></script>
+    <div id="container">
+      <script src="scripts/scripts.js"></script>
+      <div>
+        <table border="1">
+          <tr>
+              <td class="cell" id="1x1" onclick="cellCheck('1x1')">1</td>
+              <td class="cell" id="1x2" onclick="cellCheck('1x2')">2</td>
+              <td class="cell" id="1x3" onclick="cellCheck('1x3')">3</td>
+              <td class="cell" id="1x4" onclick="cellCheck('1x4')">4</td>
+          </tr>
+          <tr>
+              <td class="cell" id="2x1" onclick="cellCheck('2x1')">5</td>
+              <td class="cell" id="2x2" onclick="cellCheck('2x2')">6</td>
+              <td class="cell" id="2x3" onclick="cellCheck('2x3')">7</td>
+              <td class="cell" id="2x4" onclick="cellCheck('2x4')">8</td>
+          </tr>
+          <tr>
+              <td class="cell" id="3x1" onclick="cellCheck('3x1')">9</td>
+              <td class="cell" id="3x2" onclick="cellCheck('3x2')">10</td>
+              <td class="cell" id="3x3" onclick="cellCheck('3x3')">11</td>
+              <td class="cell" id="3x4" onclick="cellCheck('3x4')">12</td>
+          </tr>
+          <tr>
+              <td class="cell" id="4x1" onclick="cellCheck('4x1')">13</td>
+              <td class="cell" id="4x2" onclick="cellCheck('4x2')">14</td>
+              <td class="cell" id="4x3" onclick="cellCheck('4x3')">15</td>
+              <td class="cell" id="4x4" onclick="cellCheck('4x4')">.</td>
+          </tr>
+        </table>
+      </div>
+      <div class="button-containers">
+        <button onclick="reset()">Reset</button>
+        <button onclick="scramble()">Scramble</button>
+      </div>
+    </div>
   </body>
 </html>
