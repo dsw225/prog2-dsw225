@@ -58,6 +58,7 @@ function switchValues(cell1, cell2) {
 }
 
 function reset() {
+	document.getElementById("container").style.backgroundColor = "#c7c7c7";
 	document.getElementById("1x1").innerHTML = 1;
 	document.getElementById("1x2").innerHTML = 2;
 	document.getElementById("1x3").innerHTML = 3;
